@@ -393,6 +393,8 @@ def configure
             bin_path: bin_path,
             user: current['user'],
             group: current['group'],
+            configdir: current['configdir'],
+            name: server_name,
             limit_nofile: descriptors
           )
           notifies :run, "execute[#{reload_name}]", :immediately
